@@ -22,7 +22,7 @@ namespace OopsAllLalafellsSRE.Utils
                             // if native lalafells
                             if (!Drawer.NonNativeID.Contains(handler.PlayerCharacter.Name.TextValue))
                             {
-                                // Plugin.OutputChatLine($"Adding HQ to {handler.PlayerCharacter.Name.TextValue}");
+                                // Service.pluginLog.Debug($"Adding HQ to {handler.PlayerCharacter.Name.TextValue}");
                                 handler.NameParts.Text = $"\uE03C {handler.Name}";
                             }
                         }

@@ -24,6 +24,7 @@ namespace OopsAllLalafellsSRE.Utils
         private static void RefreshAllPlayers()
         {
             Plugin.OutputChatLine("Refreshing all players");
+            NonNativeID.Clear();
             Service.penumbraApi.RedrawAll(RedrawType.Redraw);
             Service.namePlateGui.RequestRedraw();
         }
