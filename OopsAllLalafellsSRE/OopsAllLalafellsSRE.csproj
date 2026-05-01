@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Dalamud.NET.Sdk/14.0.1">
+<Project Sdk="Dalamud.NET.Sdk/15.0.0">
     <PropertyGroup>
         <Authors></Authors>
         <Company></Company>
-        <Version>2.0.2.10</Version>
+        <Version>2.0.2.11</Version>
         <Description>Turn everyone around you into Lalafells (or other races!)</Description>
         <Copyright></Copyright>
         <PackageProjectUrl>https://github.com/kelvin124124/OopsAllLalafellsSRE</PackageProjectUrl>
@@ -13,5 +13,9 @@
 
     <ItemGroup>
         <PackageReference Include="Penumbra.Api" Version="5.13.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Update="DotNet.ReproducibleBuilds" Version="2.0.2" />
     </ItemGroup>
 </Project>
