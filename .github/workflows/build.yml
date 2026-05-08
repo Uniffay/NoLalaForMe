@@ -52,13 +52,14 @@ jobs:
       - name: Update repo.json
         shell: pwsh
         run: |
-          $json = Get-Content "repo.json" | ConvertFrom-Json
-          $json[0].AssemblyVersion = "${{ steps.version.outputs.version }}"
-          $json[0].LastUpdate = [int][double]::Parse((Get-Date -UFormat %s))
-          $json[0].DownloadLinkInstall = "https://github.com/${{ github.repository }}/releases/latest/download/latest.zip"
-          $json[0].DownloadLinkUpdate = "https://github.com/${{ github.repository }}/releases/latest/download/latest.zip"
-          $json[0].RepoUrl = "https://github.com/${{ github.repository }}"
-          $json | ConvertTo-Json -Depth 10 -AsArray | Set-Content "repo.json"
+          $raw = Get-Content "repo.json" -Raw | ConvertFrom-Json
+          $item = if ($raw -is [System.Array]) { $raw[0] } else { $raw }
+          $item.AssemblyVersion = "${{ steps.version.outputs.version }}"
+          $item.LastUpdate = [int][double]::Parse((Get-Date -UFormat %s))
+          $item.DownloadLinkInstall = "https://github.com/${{ github.repository }}/releases/latest/download/latest.zip"
+          $item.DownloadLinkUpdate = "https://github.com/${{ github.repository }}/releases/latest/download/latest.zip"
+          $item.RepoUrl = "https://github.com/${{ github.repository }}"
+          "[`n" + (ConvertTo-Json $item -Depth 10) + "`n]" | Set-Content "repo.json" -Encoding UTF8
 
       - name: Commit repo.json
         shell: pwsh
