@@ -56,7 +56,7 @@ internal class ConfigWindow : Window
 
         ImGui.Separator();
         bool _NameHQ = configuration.nameHQ;
-        if (ImGui.Checkbox("Add HQ symbol to native lalafells\n(or other races)", ref _NameHQ))
+        if (ImGui.Checkbox("Add HQ symbol to transformed lalafells", ref _NameHQ))
         {
             configuration.nameHQ = _NameHQ;
             configuration.Save();

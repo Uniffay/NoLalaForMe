@@ -19,10 +19,9 @@ namespace OopsAllLalafellsSRE.Utils
                         {
                             if (handler.PlayerCharacter == null) return;
 
-                            // if native lalafells
-                            if (!Drawer.NonNativeID.Contains(handler.PlayerCharacter.Name.TextValue))
+                            // if transformed lalafell (show HQ to identify them)
+                            if (Drawer.NonNativeID.Contains(handler.PlayerCharacter.Name.TextValue))
                             {
-                                // Service.pluginLog.Debug($"Adding HQ to {handler.PlayerCharacter.Name.TextValue}");
                                 handler.NameParts.Text = $"\uE03C {handler.Name}";
                             }
                         }

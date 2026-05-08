@@ -38,8 +38,10 @@ namespace OopsAllLalafellsSRE.Utils
             if (gameObj->ObjectKind != ObjectKind.Pc) return;
 
             var customData = Marshal.PtrToStructure<CharaCustomizeData>(customizePtr);
-            if (customData.Race == Service.configuration.SelectedRace || customData.Race == Race.UNKNOWN)
-                return;
+            // Only transform Lalafells
+            if (customData.Race != Race.LALAFELL) return;
+            // Skip if target race is also Lalafell (no-op)
+            if (customData.Race == Service.configuration.SelectedRace) return;
 
             NonNativeID.Add(gameObj->NameString);
             ChangeRace(customData, customizePtr, Service.configuration.SelectedRace);
