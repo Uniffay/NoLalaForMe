@@ -8,10 +8,13 @@
     "AssemblyVersion": "2.0.2.12",
     "RepoUrl": "https://github.com/Uniffay/NoLalaForMe",
     "ApplicableVersion": "any",
-    "Tags": [ "lalafell", "race" ],
+    "Tags": [
+      "lalafell",
+      "race"
+    ],
     "DownloadLinkInstall": "https://github.com/Uniffay/NoLalaForMe/releases/latest/download/latest.zip",
     "DownloadLinkUpdate": "https://github.com/Uniffay/NoLalaForMe/releases/latest/download/latest.zip",
     "DownloadCount": 0,
-    "LastUpdate": 1778235661
+    "LastUpdate": 1778235919
   }
 ]
