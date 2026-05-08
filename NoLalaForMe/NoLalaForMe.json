@@ -1,8 +1,8 @@
 {
     "Author": "Uniffay",
     "Name": "NoLalaForMe",
-    "Punchline": "Turn everyone around you into Lalafells (or other races!)",
-    "Description": "Turn everyone around you into Lalafells (or other races!)\n/polala on = enable plugin.\n/polala off = disable plugin.",
+    "Punchline": "No Lalafells allowed. Not on my watch.",
+    "Description": "Tired of Lalafells? This plugin transforms all Lalafell players and NPCs around you into the race of your choice.\n\n/polala on — enable\n/polala off — disable\n/polala — open config",
     "InternalName": "NoLalaForMe",
     "ApplicableVersion": "any",
     "Tags": [
