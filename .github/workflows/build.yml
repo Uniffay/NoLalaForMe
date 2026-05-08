@@ -45,7 +45,8 @@ jobs:
         run: |
           Compress-Archive `
             -Path "NoLalaForMe/bin/x64/Release/NoLalaForMe.dll",
-                  "NoLalaForMe/bin/x64/Release/NoLalaForMe.json" `
+                  "NoLalaForMe/bin/x64/Release/NoLalaForMe.json",
+                  "NoLalaForMe/bin/x64/Release/Penumbra.Api.dll" `
             -DestinationPath "latest.zip"
 
       - name: Update repo.json
