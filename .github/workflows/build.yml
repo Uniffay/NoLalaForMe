@@ -57,7 +57,7 @@ jobs:
           $json[0].DownloadLinkInstall = "https://github.com/${{ github.repository }}/releases/latest/download/latest.zip"
           $json[0].DownloadLinkUpdate = "https://github.com/${{ github.repository }}/releases/latest/download/latest.zip"
           $json[0].RepoUrl = "https://github.com/${{ github.repository }}"
-          $json | ConvertTo-Json -Depth 10 | Set-Content "repo.json"
+          @($json) | ConvertTo-Json -Depth 10 | Set-Content "repo.json"
 
       - name: Commit repo.json
         shell: pwsh
