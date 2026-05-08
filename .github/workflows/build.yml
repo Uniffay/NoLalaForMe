@@ -20,6 +20,12 @@ jobs:
         with:
           dotnet-version: '10.0.x'
 
+      - name: Download Dalamud
+        shell: pwsh
+        run: |
+          Invoke-WebRequest -Uri "https://goatcorp.github.io/dalamud-distrib/latest.zip" -OutFile "dalamud.zip"
+          Expand-Archive -Force "dalamud.zip" "$env:APPDATA\XIVLauncher\addon\Hooks\dev\"
+
       - name: Restore
         run: dotnet restore NoLalaForMe.sln
 
