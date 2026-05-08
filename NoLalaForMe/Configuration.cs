@@ -1,16 +1,16 @@
 using Dalamud.Configuration;
 using Dalamud.Plugin;
 using System;
-using static OopsAllLalafellsSRE.Utils.Constant;
+using static NoLalaForMe.Utils.Constant;
 
-namespace OopsAllLalafellsSRE
+namespace NoLalaForMe
 {
     [Serializable]
     internal class Configuration : IPluginConfiguration
     {
         public int Version { get; set; } = 0;
-        public Race SelectedRace { get; set; } = Race.LALAFELL;
-        public bool enabled { get; set; } = false;
+        public Race SelectedRace { get; set; } = Race.VIERA;
+        public bool enabled { get; set; } = true;
         public bool stayOn { get; set; } = false;
         public bool nameHQ { get; set; } = true;
 

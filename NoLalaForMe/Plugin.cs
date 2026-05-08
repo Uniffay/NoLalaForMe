@@ -3,18 +3,18 @@ using Dalamud.Game.Text;
 using Dalamud.Game.Text.SeStringHandling;
 using Dalamud.Interface.Windowing;
 using Dalamud.Plugin;
-using OopsAllLalafellsSRE.Utils;
-using OopsAllLalafellsSRE.Windows;
+using NoLalaForMe.Utils;
+using NoLalaForMe.Windows;
 using Penumbra.Api.Enums;
 
-namespace OopsAllLalafellsSRE
+namespace NoLalaForMe
 {
     internal sealed class Plugin : IDalamudPlugin
     {
-        public static string Name => "OopsAllLalafellsSRE";
+        public static string Name => "NoLalaForMe";
         private const string CommandName = "/polala";
 
-        public WindowSystem WindowSystem { get; } = new("OopsAllLalafellsSRE");
+        public WindowSystem WindowSystem { get; } = new("NoLalaForMe");
 
         public Plugin(IDalamudPluginInterface pluginInterface)
         {
@@ -43,7 +43,7 @@ namespace OopsAllLalafellsSRE
 
             Service.commandManager.AddHandler(CommandName, new CommandInfo(OnCommand)
             {
-                HelpMessage = "Opens OopsAllLalafellsSRE config menu."
+                HelpMessage = "Opens NoLalaForMe config menu."
             });
         }
 

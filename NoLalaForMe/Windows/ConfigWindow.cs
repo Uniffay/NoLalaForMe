@@ -1,11 +1,11 @@
 using Dalamud.Bindings.ImGui;
 using Dalamud.Interface.Windowing;
-using OopsAllLalafellsSRE.Utils;
+using NoLalaForMe.Utils;
 using System;
 using System.Numerics;
-using static OopsAllLalafellsSRE.Utils.Constant;
+using static NoLalaForMe.Utils.Constant;
 
-namespace OopsAllLalafellsSRE.Windows;
+namespace NoLalaForMe.Windows;
 
 internal class ConfigWindow : Window
 {
@@ -15,7 +15,7 @@ internal class ConfigWindow : Window
     public event Action? OnConfigChanged;
 
     public ConfigWindow(Plugin plugin) : base(
-        "OopsAllLalafellsSRE Configuration Window",
+        "NoLalaForMe Configuration Window",
         ImGuiWindowFlags.NoResize | ImGuiWindowFlags.NoCollapse | ImGuiWindowFlags.NoScrollbar |
         ImGuiWindowFlags.NoScrollWithMouse)
     {

@@ -3,9 +3,9 @@ using Penumbra.Api.Enums;
 using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
-using static OopsAllLalafellsSRE.Utils.Constant;
+using static NoLalaForMe.Utils.Constant;
 
-namespace OopsAllLalafellsSRE.Utils
+namespace NoLalaForMe.Utils
 {
     internal class Drawer : IDisposable
     {
@@ -16,7 +16,7 @@ namespace OopsAllLalafellsSRE.Utils
             Service.configWindow.OnConfigChanged += RefreshAllPlayers;
             if (Service.configuration.enabled)
             {
-                Plugin.OutputChatLine("OopsAllLalafellsSRE starting...");
+                Plugin.OutputChatLine("NoLalaForMe starting...");
                 RefreshAllPlayers();
             }
         }
@@ -33,9 +33,7 @@ namespace OopsAllLalafellsSRE.Utils
         {
             if (!Service.configuration.enabled) return;
 
-            // return if not player character
             var gameObj = (GameObject*)gameObjectAddress;
-            if (gameObj->ObjectKind != ObjectKind.Pc) return;
 
             var customData = Marshal.PtrToStructure<CharaCustomizeData>(customizePtr);
             // Only transform Lalafells

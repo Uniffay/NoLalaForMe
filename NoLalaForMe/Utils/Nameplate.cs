@@ -1,6 +1,6 @@
 using Dalamud.Game.Gui.NamePlate;
 
-namespace OopsAllLalafellsSRE.Utils
+namespace NoLalaForMe.Utils
 {
     internal class Nameplate
     {

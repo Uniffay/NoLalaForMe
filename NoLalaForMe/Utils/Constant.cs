@@ -2,7 +2,7 @@ using Dalamud.Game.ClientState.Objects.Enums;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
-namespace OopsAllLalafellsSRE.Utils
+namespace NoLalaForMe.Utils
 {
     internal static class Constant
     {
